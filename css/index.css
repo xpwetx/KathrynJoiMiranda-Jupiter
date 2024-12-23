@@ -1,0 +1,20 @@
+body {
+
+    background-color: #000;
+
+    color: #1e90ff;
+}
+
+h1 {
+    color: #ffff00;
+    font-family: papyrus, fantasy;
+    font-size: 72px;
+    text-align: center;
+}
+
+h2 {
+    color: #ffe4ff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 72px;
+
+}
