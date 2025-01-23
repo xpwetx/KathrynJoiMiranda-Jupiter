@@ -1,12 +1,12 @@
 /* =======================
-         MOBILE STYLES (Base styles)
+ MOBILE STYLES (Base styles)
 ========================== */
 
 body {
     padding: 20px;
     margin: 0;
-    background-color: #000000;  /* Black background */
-    color: #ffffff;             /* White text */
+    background-color: #000000;  
+    color: #ffffff;         
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
     line-height: 1.5;
@@ -67,7 +67,7 @@ a:focus {
     color: #ffffff;
     border-radius: 8px;
     display: grid;
-    grid-template-columns: 1fr;  /* Single column on mobile */
+    grid-template-columns: 1fr;
     gap: 20px;
 }
 
@@ -90,44 +90,66 @@ a:focus {
 
 
 /* =======================
-   Desktop Styles (min-width: 1024px)
+   Desktop Styles 
 ========================== */
 
 @media (min-width: 1024px) {
     /* Header */
     h1 {
-        font-size: 72px;     /* Increase header size for desktop */
-        color: #ffd700;      /* Change color for contrast */
+        font-size: 72px;    
+        color: #ffd700;   
     }
+
+    /* Pragraph text (DESKTOP) */
+    p {
+        font-style: italic;
+        font-weight: 100;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: justify;
+        text-align: right;
+    }
+    
+    .p2 {
+        text-align: right;
+        word-spacing: -2px;
+        word-spacing: 2px;
+        line-height: 0.8;
+        padding: 10px;
+        margin: 10px;
+        font-size: 18px;
+        color: darkorange;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    
 
     /* Flex Containers */
     .flex-container {
-        flex-direction: row;      /* Horizontal layout for desktop */
-        justify-content: space-evenly; /* Even spacing */
-        font-size: 24px;         /* Increase font size for desktop */
+        flex-direction: row;     
+        justify-content: space-evenly; 
+        font-size: 24px;        
     }
 
     /* Experience Container */
     .experience-container {
-        max-width: 50%;         /* Further limit width on desktop */
-        margin: 30px auto;      /* Increased margin */
-        font-size: 24px;        /* Increase font size */
-        padding: 40px;          /* Increase padding */
-        grid-template-columns: 1fr 1fr; /* Two columns for desktops */
+        max-width: 50%;       
+        margin: 30px auto;      
+        font-size: 24px;       
+        padding: 40px;          
+        grid-template-columns: 1fr 1fr; 
     }
 
     /* Contact Section */
     .flex-container-contact {
-        font-size: 24px;      /* Increase font size */
-        height: 80px;         /* Increase height */
-        padding: 15px 20px;   /* Adjust padding */
+        font-size: 24px;      
+        height: 80px;        
+        padding: 15px 20px;  
     }
 
     /* Links */
     a {
-        padding: 15px 20px;  /* Larger padding */
-        font-size: 24px;      /* Larger font size */
-        margin: 15px 20px;    /* Adjust margins */
+        padding: 15px 20px;  
+        font-size: 24px;     
+        margin: 15px 20px;   
     }
 }
 
@@ -262,4 +284,57 @@ a {
     background-color: red;
     color: white;
     border-radius: 8px;
+}
+
+
+/* STYLE SKILLS LIST */
+#Skills {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+#Skills h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#Skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#Skills ul li {
+    background-color: #008cba;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #skills ul {
+        flex-direction: column;
+    }
+
+    #skills ul li {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #skills ul li {
+        font-size: 1rem;
+    }
 }
