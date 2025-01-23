@@ -1,55 +1,103 @@
 /* =======================
- MOBILE STYLES (Base styles)
+   GENERAL STYLES (For Both Mobile & Desktop)
 ========================== */
 
+/* Body */
 body {
-    padding: 20px;
     margin: 0;
-    background-color: #000000;  
-    color: #ffffff;         
+    padding: 20px;
+    background-color: #000000;
+    color: #ffffff;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
     line-height: 1.5;
     text-align: center;
 }
 
-/* Links */
+/* Navigation (GENERAL) */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Title (GENERAL) */
+h1 {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    margin: 10px;
+    color: burlywood;
+    background-color: blue;
+    font-family: papyrus, fantasy;
+    border-radius: 20px;
+    font-size: 72px;
+    text-align: center;
+    z-index: 1000;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+/* Subheadings (GENERAL) */
+h2 {
+    padding: 0;
+    margin: 0;
+    color: cadetblue;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 64px;
+    text-align: left;
+}
+
+/* Links (GENERAL) */
 a {
-    padding: 5px 10px;
-    margin: 5px;
+    padding: 10px 15px;
+    margin: 10px;
+    text-align: center;
     border-style: hidden;
     background-color: bisque;
     border-radius: 15px;
     text-decoration: none;
     color: red;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Barlow condensed', sans-serif;
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
     background-color: orange;
     color: #000;
     outline: 2px solid #000;
 }
 
-/* Flex containers (MOBILE) */
+/* Flex Containers (GENERAL) */
 .flex-container {
     display: flex;
     justify-content: center;
-    background-color: aqua;
+    align-items: center;
     padding: 10px;
     margin: 10px;
+    background-color: aqua;
+    color: rgb(0, 2, 0);
     font-size: 18px;
     font-weight: 100;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    word-spacing: 5px;
     border-radius: 20px;
+    flex-wrap: wrap; /* Added for better responsiveness */
 }
 
+/* Flex Container List Items (GENERAL) */
 .flex-container ul {
-    display: flex;
+    list-style-type: none;
     justify-content: center;
     padding: 0;
     margin: 0;
-    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .flex-container ul li {
@@ -57,18 +105,53 @@ a:focus {
     color: white;
 }
 
-/* Experience Container (MOBILE) */
+/* Experience Container (GENERAL) */
 .experience-container {
-    max-width: 100%;
+    max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* =======================
+   MOBILE STYLES
+========================== */
+
+/* Body (MOBILE) */
+body {
+    font-size: 16px;
+}
+
+/* Flex Containers (MOBILE) */
+.flex-container {
+    flex-direction: column;
     font-size: 18px;
+    font-weight: 100;
+}
+
+.flex-container ul li {
+    margin: 5px 0;
+}
+
+/* Links (MOBILE) */
+a {
+    padding: 5px 10px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+/* Experience Container (MOBILE) */
+.experience-container {
+    font-size: 16px;
     background-color: red;
     color: #ffffff;
     border-radius: 8px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
 }
 
 /* Contact Section (MOBILE) */
@@ -88,16 +171,16 @@ a:focus {
     width: auto;
 }
 
-
 /* =======================
    Desktop Styles 
 ========================== */
 
 @media (min-width: 1024px) {
-    /* Header */
+
+    /* Header (DESKTOP) */
     h1 {
-        font-size: 72px;    
-        color: #ffd700;   
+        font-size: 72px;
+        color: #ffd700;
     }
 
     /* Pragraph text (DESKTOP) */
@@ -108,10 +191,9 @@ a:focus {
         text-align: justify;
         text-align: right;
     }
-    
+
     .p2 {
         text-align: right;
-        word-spacing: -2px;
         word-spacing: 2px;
         line-height: 0.8;
         padding: 10px;
@@ -120,188 +202,161 @@ a:focus {
         color: darkorange;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
-    
 
-    /* Flex Containers */
+    /* Flex Containers (DESKTOP) */
     .flex-container {
-        flex-direction: row;     
-        justify-content: space-evenly; 
-        font-size: 24px;        
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 24px;
     }
 
-    /* Experience Container */
+    /* Experience Container (DESKTOP) */
     .experience-container {
-        max-width: 50%;       
-        margin: 30px auto;      
-        font-size: 24px;       
-        padding: 40px;          
-        grid-template-columns: 1fr 1fr; 
+        max-width: 50%;
+        margin: 30px auto;
+        font-size: 24px;
+        padding: 40px;
+        grid-template-columns: 1fr 1fr;
     }
 
-    /* Contact Section */
+    /* Contact Section (DESKTOP) */
     .flex-container-contact {
-        font-size: 24px;      
-        height: 80px;        
-        padding: 15px 20px;  
+        font-size: 24px;
+        height: 80px;
+        padding: 15px 20px;
     }
 
-    /* Links */
+    /* Links (DESKTOP) */
     a {
-        padding: 15px 20px;  
-        font-size: 24px;     
-        margin: 15px 20px;   
+        padding: 15px 20px;
+        font-size: 24px;
+        margin: 15px 20px;
     }
 }
 
+/* Styling (DESKTOP) */
+@media (min-width: 1200px) {
+    form {
+        width: 50%;
+        padding: 40px;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 1.2rem;
+    }
+}
 
 /* =======================
-    General Styles (For Both Mobile & Desktop)
+    Form Styling (For Both Mobile & Desktop)
 ========================== */
 
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: center;
-}
-
-/* Navigation (DESKTOP) */
-nav {
-    width: 100%;
+/* Submission Form (GENERAL STYLES) */
+form {
     display: flex;
-    justify-content: center;
-}
-
-ul li {
-    padding: 0px;
-    margin: 0px;
-    letter-spacing: -1px;
-    line-height: -1.4px;
-    word-spacing: 5px;
-    font-weight: 700;
-    font-family: 'Twinkle Star', sans-serif;
-    list-style-type: none;
-    font-size: 16px;
-    text-align: left;
-}
-
-/* Title (Both) */
-.center-content {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-h1 {
-    position: sticky;
-    top: 0;
-    padding: 10px;
-    margin: 10px;
-    color: burlywood;
-    background-color: blue;
-    font-family: papyrus, fantasy;
-    border-radius: 20px;
-    font-size: 72px;
-    text-align: center;
-    z-index: 1000;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    display: inline-block;
-}
-
-/* Subheadings */
-h2 {
-    padding: 0px;
-    margin: 0px;
-    color: cadetblue;
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 64px;
-    text-align: left;
-}
-
-/* Links */
-a {
-    padding: 10px 15px;
-    margin: 10px 10px;
-    text-align: center;
-    border-style: hidden;
-    background-color: bisque;
-    border-radius: 15px;
-    text-decoration: none;
-    color: red;
-    font-family: 'Barlow condensed', sans-serif;
-}
-
-/* Flex Containers */
-.flex-container {
-    height: 60px;
-    width: auto;
-    max-width: fit-content;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    padding: 10px;
-    margin: 10px;
-    background-color: aqua;
-    color: rgb(0, 2, 0);
-    font-size: 18px;
-    font-weight: 100;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    word-spacing: 5px;
-    border-radius: 20px;
-}
-
-/* Flex Container List Items */
-.flex-container ul {
-    list-style-type: none;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.flex-container ul li {
-    margin: 0 10px;
-    color: white;
-}
-
-/* Experience Container */
-.experience-container {
-    max-width: 800px;
-    margin: 0 auto;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px;
     padding: 20px;
-    font-size: 30px;
-    background-color: red;
-    color: white;
+    border: 1px solid #ccc;
     border-radius: 8px;
+    background-color: #f9f9f9;
 }
 
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
 
-/* STYLE SKILLS LIST */
-#Skills {
+input,
+textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 1.2rem;
+        padding: 14px;
+    }
+
+    button {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    input,
+    textarea,
+    button {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+}
+
+/* STYLE SKILLS LIST (GENERAL) */
+#skills {
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
 }
 
-#Skills h2 {
+#skills h2 {
     font-size: 2rem;
     text-align: center;
     color: #333;
     margin-bottom: 20px;
 }
 
-#Skills ul {
+#skills ul {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -309,7 +364,7 @@ a {
     justify-content: center;
 }
 
-#Skills ul li {
+#skills ul li {
     background-color: #008cba;
     color: white;
     padding: 10px 20px;
@@ -321,20 +376,7 @@ a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    #skills ul {
-        flex-direction: column;
-    }
-
-    #skills ul li {
-        width: 100%;
-        margin: 5px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    #skills ul li {
-        font-size: 1rem;
-    }
+#skills ul li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }

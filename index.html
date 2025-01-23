@@ -18,11 +18,13 @@
   <nav>
     <div class="flex-container">
       <ul>
-        <li><a href="#About">ABOUT</a></li>
-        <li><a href="#Experience">EXPERIENCE</a></li>
-        <li><a href="#Skills">SKILLS</a></li>
-        <li><a href="#Projects">PROJECTS</a></li>
-        <li><a href="#Contact">CONTACT</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#leave-message">LEAVE A MESSAGE</a></li>
+        <li><a href="messages">MESSAGES</a></li>
       </ul>
     </div>
   </nav>
@@ -31,7 +33,7 @@
     <h1>Kathryn's Portfolio</h1>
   </div>
 
-  <section id="About">
+  <section id="about">
     <h2>About.</h2>
     <p>Get to know me.</p>
 
@@ -41,7 +43,7 @@
       order to expand my knowledge of computers and programming.</p>
   </section>
 
-  <section id="Experience">
+  <section id="experience">
     <h2>Experience.</h2>
     <p>What do I know?</p>
   </section>
@@ -69,17 +71,17 @@
     </div>
   </section>
 
-  <section id="Skills">
+  <section id="skills">
     <h2>Skills.</h2>
     <ul>
     </ul>
   </section>
 
-  <section id="Projects">
+  <section id="projects">
     <h2>Projects.</h2>
   </section>
 
-  <section id="Contact">
+  <section id="contact">
     <h2>Contact information.</h2>
     <p>How to reach me.</p>
 
@@ -93,7 +95,41 @@
     </div class>
 
   </section>
-<script src="js/index.js"></script>
+
+  <section id="leave-message">
+    <h2>Leave a message</h2>
+    <form name="leave_message">
+      <!--USERNAME-->
+      <label for="usersName">Name:</label>
+      <input type="text" id="usersName" name="usersName" required>
+      <br>
+
+
+      <!--Email-->
+      <label for="usersEmail">Email:</label>
+      <input type="text" id="usersEmail" required>
+      <br>
+
+      <!--Message-->
+      <label for="usersMessage">Message:</label>
+      <textarea id="usersMessage" name="usersMessage" required></textarea>
+      <br>
+      <!--Submit button-->
+      <button type="submit">Submit</button>
+
+    </form>
+  </section>
+
+  <!--Messages List-->
+  <section id="messages">
+  <h2>Messages</h2>
+  <ul></ul>
+  </section>
+  
+  <footer>
+    <script src="js/index.js" defer></script>
+  </footer>
+
 
 </body>
 
