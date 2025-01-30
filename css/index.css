@@ -13,7 +13,7 @@ body {
     text-align: center;
 }
 
-/* Links */
+/* Links (MOBILE) */
 a {
     padding: 5px 10px;
     margin: 5px;
@@ -94,7 +94,7 @@ a:focus {
 ========================== */
 
 @media (min-width: 1024px) {
-    /* Header */
+    /* Header (DESKTOP) */
     h1 {
         font-size: 72px;    
         color: #ffd700;   
@@ -122,14 +122,14 @@ a:focus {
     }
     
 
-    /* Flex Containers */
+    /* Flex Containers (DESKTOP) */
     .flex-container {
         flex-direction: row;     
         justify-content: space-evenly; 
         font-size: 24px;        
     }
 
-    /* Experience Container */
+    /* Experience Container (DESKTOP) */
     .experience-container {
         max-width: 50%;       
         margin: 30px auto;      
@@ -138,14 +138,14 @@ a:focus {
         grid-template-columns: 1fr 1fr; 
     }
 
-    /* Contact Section */
+    /* Contact Section (DESKTOP) */
     .flex-container-contact {
         font-size: 24px;      
         height: 80px;        
         padding: 15px 20px;  
     }
 
-    /* Links */
+    /* Links (DESKTOP) */
     a {
         padding: 15px 20px;  
         font-size: 24px;     
@@ -169,7 +169,7 @@ body {
     text-align: center;
 }
 
-/* Navigation (DESKTOP) */
+/* Navigation (GENERAL) */
 nav {
     width: 100%;
     display: flex;
@@ -189,7 +189,7 @@ ul li {
     text-align: left;
 }
 
-/* Title (Both) */
+/* Title (GENERAL) */
 .center-content {
     display: flex;
     justify-content: center;
@@ -213,7 +213,7 @@ h1 {
     display: inline-block;
 }
 
-/* Subheadings */
+/* Subheadings (GENERAL) */
 h2 {
     padding: 0px;
     margin: 0px;
@@ -225,7 +225,7 @@ h2 {
     text-align: left;
 }
 
-/* Links */
+/* Links (GENERAL) */
 a {
     padding: 10px 15px;
     margin: 10px 10px;
@@ -238,7 +238,7 @@ a {
     font-family: 'Barlow condensed', sans-serif;
 }
 
-/* Flex Containers */
+/* Flex Containers (GENERAL) */
 .flex-container {
     height: 60px;
     width: auto;
@@ -259,7 +259,7 @@ a {
     border-radius: 20px;
 }
 
-/* Flex Container List Items */
+/* Flex Container List Items (GENERAL) */
 .flex-container ul {
     list-style-type: none;
     justify-content: center;
@@ -275,7 +275,7 @@ a {
     color: white;
 }
 
-/* Experience Container */
+/* Experience Container (GENERAL) */
 .experience-container {
     max-width: 800px;
     margin: 0 auto;
@@ -287,21 +287,21 @@ a {
 }
 
 
-/* STYLE SKILLS LIST */
-#Skills {
+/* STYLE SKILLS LIST (GENERAL) */
+#skills {
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
 }
 
-#Skills h2 {
+#skills h2 {
     font-size: 2rem;
     text-align: center;
     color: #333;
     margin-bottom: 20px;
 }
 
-#Skills ul {
+#skills ul {
     list-style-type: none;
     padding: 0;
     display: flex;
@@ -309,7 +309,7 @@ a {
     justify-content: center;
 }
 
-#Skills ul li {
+#skills ul li {
     background-color: #008cba;
     color: white;
     padding: 10px 20px;
@@ -321,7 +321,7 @@ a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Media queries for responsiveness */
+/* Media queries for responsiveness (GENERAL) */
 @media (max-width: 768px) {
     #skills ul {
         flex-direction: column;
@@ -336,5 +336,65 @@ a {
 @media (max-width: 480px) {
     #skills ul li {
         font-size: 1rem;
+    }
+}
+
+/* Style for projects section (GENERAL) */
+#projects {
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* style for the project LIST (GENERAL) */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Style for individual projects */
+.project-list li {
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-size: 1.2rem;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Hover effect for each project */
+.project-list li:hover {
+    transform: translateY(-5px);
+    background-color: #e0e0e0;
+}
+
+/* Responsive design using media queries */
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    project-list li {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-list li {
+        width: 100%;
     }
 }
