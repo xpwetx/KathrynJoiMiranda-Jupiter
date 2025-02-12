@@ -2,51 +2,78 @@
    GENERAL STYLES (For Both Mobile & Desktop)
 ========================== */
 
-/* Body */
-body {
+/* Resetting list styles */
+ul,
+ol {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    padding: 20px;
-    background-color: #000000;
-    color: #ffffff;
+}
+
+/* Body */
+
+body {
+    height: 200vh;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
     line-height: 1.5;
     text-align: center;
 }
 
-<<<<<<< HEAD
-/* Links (MOBILE) */
-=======
-/* Navigation (GENERAL) */
+html,
+body {
+    position: static;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+/* Navigation */
 nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 999;
 }
 
-/* Title (GENERAL) */
+/* STICKY HEADER */
+.header-container {
+    width: 100%;
+    position: relative;
+    z-index: 999;
+}
+
+/* Header */
 h1 {
     position: sticky;
     top: 0;
     padding: 10px;
-    margin: 10px;
-    color: burlywood;
-    background-color: blue;
+    margin: 10px 0;
+    color: #f39c12;
+    background-color: #2980b9;
     font-family: papyrus, fantasy;
     border-radius: 20px;
     font-size: 72px;
-    text-align: center;
     z-index: 1000;
-    font-weight: bolder;
-    letter-spacing: 2px;
     display: inline-block;
+    font-weight: bolder;
+    margin-top: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
 }
 
-/* Subheadings (GENERAL) */
+
+
+/* Subheadings */
 h2 {
     padding: 0;
     margin: 0;
-    color: cadetblue;
+    color: #8e44ad;
     letter-spacing: 2px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
@@ -54,54 +81,79 @@ h2 {
     text-align: left;
 }
 
-/* Links (GENERAL) */
->>>>>>> 81bc56a5f4db956b0f807c3b64aef49dc0a8dcab
+
+/* Links */
 a {
+    display: flex;
     padding: 10px 15px;
     margin: 10px;
     text-align: center;
-    border-style: hidden;
-    background-color: bisque;
+    background-color: #f39c12;
     border-radius: 15px;
     text-decoration: none;
-    color: red;
+    color: #2c3e50;
     font-family: 'Barlow condensed', sans-serif;
 }
 
-a:hover, a:focus {
-    background-color: orange;
-    color: #000;
-    outline: 2px solid #000;
+a:hover,
+a:focus {
+    background-color: #f1c40f;
+    color: #ffffff;
+    outline: 2px solid #2c3e50;
 }
 
-/* Flex Containers (GENERAL) */
+/* Contacts */
+#contact ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+#contact ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+
+/* Projects */
+#projects ul.project-list li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #2c3e50
+}
+
+#projects ul.project-list li a:hover {
+    color: #f39c12;
+}
+
+/* Flex Containers */
 .flex-container {
+    list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    margin: 10px;
-    background-color: aqua;
-    color: rgb(0, 2, 0);
+    padding: 0;
+    margin: 0;
+    background-color: #34495e;
+    color: #ecf0f1;
     font-size: 18px;
     font-weight: 100;
     text-align: center;
     letter-spacing: 1px;
     line-height: 1.5;
-    word-spacing: 5px;
+    flex-wrap: wrap;
     border-radius: 20px;
-    flex-wrap: wrap; /* Added for better responsiveness */
 }
 
-/* Flex Container List Items (GENERAL) */
+/* Flex Container List Items */
 .flex-container ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 .flex-container ul li {
@@ -109,131 +161,149 @@ a:hover, a:focus {
     color: white;
 }
 
-/* Experience Container (GENERAL) */
+/* Experience Table Container */
 .experience-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-size: 30px;
-    background-color: red;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #34495e;
+    color: #ecf0f1;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Experience Table */
+.experience-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #e74c3c;
+}
+
+/* Table Header */
+.experience-table th {
+    background-color: #e74c3c;
     color: white;
-    border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    padding: 12px;
+    font-size: 20px;
+    text-align: left;
+    border-radius: 10px 10px 0 0;
+    letter-spacing: 1px;
+}
+
+/* Table Body */
+.experience-table td {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    text-align: left;
+    border-bottom: 1px solid #34495e;
+}
+
+/* Table Row Hover Effect */
+.experience-table tr:hover {
+    background-color: #e67e22;
+    transition: background-color 0.3s ease;
+}
+
+/* Alternate Row Styling */
+.experience-table tr:nth-child(even) {
+    background-color: #34495e;
 }
 
 /* =======================
-   MOBILE STYLES
+   MEDIA QUERIES (For Mobile & Desktop)
 ========================== */
 
-/* Body (MOBILE) */
-body {
-    font-size: 16px;
+/* Make experience table responsive */
+@media (max-width: 768px) {
+    .experience-table {
+        font-size: 14px;
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .experience-table th,
+    .experience-table td {
+        padding: 8px;
+    }
+
+    .experience-table th {
+        font-size: 16px;
+    }
+
+    .experience-table td {
+        font-size: 14px;
+    }
+
+    .experience-table tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .experience-table tr:nth-child(even) {
+        background-color: #34495e;
+    }
+
+    .experience-table-wrapper {
+        overflow-x: auto;
+    }
 }
 
-/* Flex Containers (MOBILE) */
-.flex-container {
-    flex-direction: column;
-    font-size: 18px;
-    font-weight: 100;
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .experience-container {
+        padding: 15px;
+        background-color: #f39c12;
+
+        color: #ffffff;
+    }
+
+    .experience-table {
+        font-size: 14px;
+    }
+
+    .flex-container-contact {
+        font-size: 18px;
+        height: 60px;
+    }
+
+    a {
+        padding: 5px 10px;
+        margin: 5px;
+        font-size: 14px;
+    }
 }
 
-.flex-container ul li {
-    margin: 5px 0;
-}
-
-/* Links (MOBILE) */
-a {
-    padding: 5px 10px;
-    margin: 5px;
-    font-size: 14px;
-}
-
-/* Experience Container (MOBILE) */
-.experience-container {
-    font-size: 16px;
-    background-color: red;
-    color: #ffffff;
-    border-radius: 8px;
-}
-
-/* Contact Section (MOBILE) */
-.flex-container-contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-    font-weight: 100;
-    text-align: center;
-    border-radius: 20px;
-    height: 60px;
-    width: auto;
-}
-
-/* =======================
-   Desktop Styles 
-========================== */
-
+/* Desktop Adjustments */
 @media (min-width: 1024px) {
-<<<<<<< HEAD
-=======
-
->>>>>>> 81bc56a5f4db956b0f807c3b64aef49dc0a8dcab
-    /* Header (DESKTOP) */
     h1 {
         font-size: 72px;
-        color: #ffd700;
+        position: sticky;
     }
 
-    /* Pragraph text (DESKTOP) */
-    p {
-        font-style: italic;
-        font-weight: 100;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        text-align: justify;
-        text-align: right;
-    }
-
-    .p2 {
-        text-align: right;
-        word-spacing: 2px;
-        line-height: 0.8;
-        padding: 10px;
-        margin: 10px;
-        font-size: 18px;
-        color: darkorange;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    }
-
-    /* Flex Containers (DESKTOP) */
     .flex-container {
-        flex-direction: row;
-        justify-content: space-evenly;
         font-size: 24px;
+        justify-content: space-evenly;
     }
 
-    /* Experience Container (DESKTOP) */
     .experience-container {
         max-width: 50%;
         margin: 30px auto;
         font-size: 24px;
         padding: 40px;
-        grid-template-columns: 1fr 1fr;
     }
 
-    /* Contact Section (DESKTOP) */
     .flex-container-contact {
         font-size: 24px;
         height: 80px;
         padding: 15px 20px;
     }
 
-    /* Links (DESKTOP) */
     a {
         padding: 15px 20px;
         font-size: 24px;
@@ -241,355 +311,37 @@ a {
     }
 }
 
-/* Styling (DESKTOP) */
-@media (min-width: 1200px) {
-    form {
-        width: 50%;
-        padding: 40px;
-    }
 
-    input,
-    textarea,
-    button {
-        font-size: 1.2rem;
-    }
+
+/* Flex layout for experience and connect sections */
+#experience .experience-list,
+#connect .connect-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* =======================
-    Form Styling (For Both Mobile & Desktop)
-========================== */
+/* Variables */
+:root {
+    --primary-color: #f39c12;
+    --secondary-color: #2980b9;
+    --accent-color: #8e44ad;
+    --background-color: #2c3e50;
+    --text-color: #ecf0f1;
+}
 
-<<<<<<< HEAD
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
-    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-/* Navigation (GENERAL) */
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-ul li {
-    padding: 0px;
-    margin: 0px;
-    letter-spacing: -1px;
-    line-height: -1.4px;
-    word-spacing: 5px;
-    font-weight: 700;
-    font-family: 'Twinkle Star', sans-serif;
-    list-style-type: none;
-    font-size: 16px;
-    text-align: left;
-}
-
-/* Title (GENERAL) */
-.center-content {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
-
-h1 {
-    position: sticky;
-    top: 0;
-    padding: 10px;
-    margin: 10px;
-    color: burlywood;
-    background-color: blue;
-    font-family: papyrus, fantasy;
-    border-radius: 20px;
-    font-size: 72px;
-    text-align: center;
-    z-index: 1000;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    display: inline-block;
-}
-
-/* Subheadings (GENERAL) */
-h2 {
-    padding: 0px;
-    margin: 0px;
-    color: cadetblue;
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 64px;
-    text-align: left;
-}
-
-/* Links (GENERAL) */
 a {
-    padding: 10px 15px;
-    margin: 10px 10px;
-    text-align: center;
-    border-style: hidden;
-    background-color: bisque;
-    border-radius: 15px;
-    text-decoration: none;
-    color: red;
-    font-family: 'Barlow condensed', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--background-color);
 }
 
-/* Flex Containers (GENERAL) */
-.flex-container {
-    height: 60px;
-    width: auto;
-    max-width: fit-content;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    padding: 10px;
-    margin: 10px;
-    background-color: aqua;
-    color: rgb(0, 2, 0);
-    font-size: 18px;
-    font-weight: 100;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 1.5;
-    word-spacing: 5px;
-    border-radius: 20px;
-}
-
-/* Flex Container List Items (GENERAL) */
-.flex-container ul {
-    list-style-type: none;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.flex-container ul li {
-    margin: 0 10px;
-    color: white;
-}
-
-/* Experience Container (GENERAL) */
-.experience-container {
-    max-width: 800px;
-    margin: 0 auto;
-=======
-/* Submission Form (GENERAL STYLES) */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin: 20px;
->>>>>>> 81bc56a5f4db956b0f807c3b64aef49dc0a8dcab
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
-
-label {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-<<<<<<< HEAD
-=======
-input,
-textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-input:focus,
-textarea:focus {
-    outline: none;
-    border-color: #4CAF50;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-button {
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-button:active {
-    background-color: #3e8e41;
-}
-
-/* Responsive Styles for Mobile Devices */
-@media (max-width: 600px) {
-    form {
-        padding: 15px;
-        width: 90%;
-    }
-
-    input,
-    textarea,
-    button {
-        font-size: 1.2rem;
-        padding: 14px;
-    }
-
-    button {
-        font-size: 1.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    input,
-    textarea,
-    button {
-        font-size: 1rem;
-        padding: 0.8rem;
-    }
-
-    textarea {
-        min-height: 100px;
-    }
-}
-
->>>>>>> 81bc56a5f4db956b0f807c3b64aef49dc0a8dcab
-/* STYLE SKILLS LIST (GENERAL) */
-#skills {
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-}
-
-#skills h2 {
-    font-size: 2rem;
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-#skills ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#skills ul li {
-    background-color: #008cba;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    text-align: center;
-    width: 200px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-<<<<<<< HEAD
-/* Media queries for responsiveness (GENERAL) */
-@media (max-width: 768px) {
-    #skills ul {
-        flex-direction: column;
-    }
-
-    #skills ul li {
-        width: 100%;
-        margin: 5px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    #skills ul li {
-        font-size: 1rem;
-    }
-=======
-#skills ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
->>>>>>> 81bc56a5f4db956b0f807c3b64aef49dc0a8dcab
-}
-
-/* Style for projects section (GENERAL) */
-#projects {
-    padding: 20px;
-    background-color: #f4f4f9;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-#projects h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-/* style for the project LIST (GENERAL) */
-.project-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 0;
-    list-style: none;
-}
-
-/* Style for individual projects */
-.project-list li {
-    background-color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-size: 1.2rem;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-}
-
-/* Hover effect for each project */
-.project-list li:hover {
-    transform: translateY(-5px);
-    background-color: #e0e0e0;
-}
-
-/* Responsive design using media queries */
-@media (max-width: 768px) {
-    .project-list {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    project-list li {
-        width: 80%;
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .project-list li {
-        width: 100%;
-    }
+a:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }

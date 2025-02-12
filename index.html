@@ -4,134 +4,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Kathryn's Portfolio</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kathryn's Portfolio</title>
   <link rel="stylesheet" href="css/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jersey+10&display=swap"
     rel="stylesheet">
-
 </head>
 
 <body>
   <nav>
     <div class="flex-container">
       <ul>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#experience">EXPERIENCE</a></li>
-        <li><a href="#skills">SKILLS</a></li>
-        <li><a href="#projects">PROJECTS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-        <li><a href="#leave-message">LEAVE A MESSAGE</a></li>
-        <li><a href="messages">MESSAGES</a></li>
-
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#leave-message">Leave a Message</a></li>
+        <li><a href="#messages">Messages</a></li>
       </ul>
     </div>
   </nav>
 
-  <div class="center-content">
+  <div class="header-container">
     <h1>Kathryn's Portfolio</h1>
   </div>
 
   <section id="about">
-    <h2>About.</h2>
+    <h2>About</h2>
     <p>Get to know me.</p>
-
-    <p class="p2">My name is Kathryn but people call me Kaye. I'm currently a stay at home mom of two small children. I
-      have no prior
-      experience with coding, however I've always had an interest in technology. I decided to apply to Code the Dream in
-      order to expand my knowledge of computers and programming.</p>
+    <p class="p2">My name is Kathryn, but people call me Kaye. I'm currently a stay-at-home mom of two small children. I have no prior experience with coding, but I've always had an interest in technology. I decided to apply to Code the Dream to expand my knowledge of computers and programming.</p>
   </section>
 
   <section id="experience">
-    <h2>Experience.</h2>
+    <h2>Experience</h2>
     <p>What do I know?</p>
-  </section>
-
-  <section class="experience-container">
-    <div class="flex-container-experience">
-      <div class="chart-row">
-        <div class="chart-label"><strong>Job title:</strong></div>
-        <div class="chart-data">prep cook</div>
-      </div>
-      <div class="chart-row">
-        <div class="chart-label"><strong>Years worked:</strong></div>
-        <div class="chart-data">3 years</div>
-      </div>
-      <div class="chart-row">
-        <div class="chart-label"><strong>Responsibilities:</strong></div>
-        <div class="chart-data">
-          <ul>
-            <li>oversaw inventory</li>
-            <li>open kitchen</li>
-            <li>handle mise en place</li>
-          </ul>
-        </div>
-      </div>
+    <div class="experience-container">
+      <table class="experience-table">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th>Years Worked</th>
+            <th>Responsibilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Prep Cook</td>
+            <td>3 years</td>
+            <td>Oversaw inventory.</td>
+          </tr>
+          <!-- More rows can go here -->
+        </tbody>
+      </table>
     </div>
   </section>
 
   <section id="skills">
-    <h2>Skills.</h2>
-    <ul>
-    </ul>
+    <h2>Skills</h2>
+    <ul></ul>
   </section>
 
   <section id="projects">
-    <h2>Projects.</h2>
-    <ul class ="project-list"></ul>
+    <h2>Projects</h2>
+    <ul class="project-list"></ul>
   </section>
 
   <section id="contact">
-    <h2>Contact information.</h2>
-    <p>How to reach me.</p>
-
+    <h2>Contact Information</h2>
+    <p>How to reach me:</p>
     <div class="flex-container-contact">
       <ul>
-        <li><strong>Instagram: </strong><a href="https://instagram.com/gutom.gang" target="_blank"
-            aria-label="Visit Instagram profile of @gutom.gang">@gutom.gang</a></li>
-        <li><strong>GitHub: </strong><a href="https://github.com/xpwetx" target="_blank"
-            aria-label="Visit GitHub profile of @xpwetx">@xpwetx</a></li>
+        <li><strong>Email:</strong> <a href="mailto:cakeholio@gmail.com">Send</a></li>
+        <li><strong>Instagram:</strong> <a href="https://instagram.com/gutom.gang" target="_blank" aria-label="Visit Instagram profile of @gutom.gang">@gutom.gang</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/xpwetx" target="_blank" aria-label="Visit GitHub profile of @xpwetx">@xpwetx</a></li>
       </ul>
-    </div class>
-
+    </div>
   </section>
 
   <section id="leave-message">
-    <h2>Leave a message</h2>
-    <form name="leave_message">
-      <!--USERNAME-->
+    <h2>Leave a Message</h2>
+    <form name="leave_message" action="#" method="POST">
+      <!-- Name -->
       <label for="usersName">Name:</label>
       <input type="text" id="usersName" name="usersName" required>
       <br>
 
-
-      <!--Email-->
+      <!-- Email -->
       <label for="usersEmail">Email:</label>
-      <input type="text" id="usersEmail" required>
+      <input type="email" id="usersEmail" name="usersEmail" required>
       <br>
 
-      <!--Message-->
+      <!-- Message -->
       <label for="usersMessage">Message:</label>
       <textarea id="usersMessage" name="usersMessage" required></textarea>
       <br>
-      <!--Submit button-->
+      
+      <!-- Submit button -->
       <button type="submit">Submit</button>
-
     </form>
   </section>
 
-  <!--Messages List-->
+  <!-- Messages List -->
   <section id="messages">
-  <h2>Messages</h2>
-  <ul></ul>
+    <h2>Messages</h2>
+    <ul></ul>
   </section>
-  
-  <footer>
-    <script src="js/index.js" defer></script>
-  </footer>
 
+  <footer>
+    <script src="js/index.js"></script>
+  </footer>
 
 </body>
 

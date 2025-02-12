@@ -1,4 +1,4 @@
-// Dynamic Date for Copyright
+// Dynamically Adding the Copyright Date
 const thisYear = new Date().getFullYear();
 const footer = document.querySelector("footer");
 if (footer) {
@@ -46,9 +46,11 @@ if (messageForm) {
             const messageList = messageSection.querySelector('ul');
             if (messageList) {
                 const newMessage = document.createElement('li');
+                const date = new Date().toLocaleString();  // Get the current date and time
                 newMessage.innerHTML = `
                     <a href="mailto:${usersEmail}">${usersName}</a>
                     <span>: ${usersMessage}</span>
+                    <br><small>${date}</small>
                 `;
 
                 // Create and append the remove button
@@ -74,56 +76,45 @@ if (messageForm) {
     console.error('No message form found.');
 }
 
+// Fetch API for GitHub Projects
+const githubUsername = 'xpwetx';  // Correct username
+const apiUrl = `https://api.github.com/users/${githubUsername}/repos`;  // Correct API URL
 
-// FETCH API
-const githubUsername = 'xpwet';
-fetch(`https://api.github.com/users/${githubUsername}/repos`)
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
+const fetchGitHubRepos = () => {
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json(); // Parse JSON response
+        })
+        .then(repositories => {
+            const projectSection = document.getElementById('projects'); // Assuming you have a 'projects' section
+            const projectList = projectSection.querySelector('.project-list');
 
+            // Clear the project list before adding new data
+            projectList.innerHTML = '';
 
-    .then(repositories => {
-        const projectSection = document.getElementById('projects');
-        const projectList = projectSection.querySelector('.project-list');
-        projectList.innerHTML = '';
-        
-    
-        if (repositories.length === 0) {
-            projectList.innerHTML = '<li>No repositories found.</li>';
-        } else {
-        repositories.forEach(repo => {
-            const project = document.createElement('li');
-            project.innerHTML = `<a href="$repo.html_url}" target="_blank">${repo.name}</a>`;
-            projectList.appendChild(project);
+            if (repositories.length === 0) {
+                projectList.innerHTML = '<li>No repositories found.</li>';
+            } else {
+                // Loop through the repositories and display them
+                repositories.forEach(repo => {
+                    const project = document.createElement('li');
+                    project.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
+                    projectList.appendChild(project);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            const projectSection = document.getElementById('projects');
+            const projectList = projectSection.querySelector('.project-list');
+            if (projectList) {
+                projectList.innerHTML = '<li>Sorry, something went wrong. Please try again later.</li>';
+            }
         });
-    }
-    })
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-        const projectSection = document.getElementById('projects');
-        const projectList = projectSection.querySelector('.project-list');
-        if (projectList) {
-            projectList.innerHTML = '<li> Sorry, something went wrong. Please try again later.</li>';
-        } else {
-            console.error("Project section not found.");
-        }
-    });
+};
 
-
-then(repositories => {
-    if (repositories.length === 0) {
-        console.log('You have no repositories or the Projects section is empty.');
-    } else {
-        repositories.forEach(repo => {
-            console.log(`Repo name: ${repo.name}, URL: ${repo.html_url}`);
-        });
-    }
-})
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-        console.log('Sorry, something went wrong with fetching your repositories. Please try again later.');
-    });
+// Call the function to fetch GitHub repositories when the page loads
+document.addEventListener('DOMContentLoaded', fetchGitHubRepos);
