@@ -16,8 +16,8 @@ body {
     height: 200vh;
     margin: 0;
     padding: 0;
-    background-color: #2c3e50;
-    color: #ecf0f1;
+    background-color: var(--background-color);
+    color: var(--text-color);
     font-family: 'Barlow Condensed', sans-serif;
     font-size: 18px;
     line-height: 1.5;
@@ -32,6 +32,8 @@ body {
     padding: 0;
     overflow: visible;
 }
+
+
 
 /* Navigation */
 nav {
@@ -54,8 +56,8 @@ h1 {
     top: 0;
     padding: 10px;
     margin: 10px 0;
-    color: #f39c12;
-    background-color: #2980b9;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
     font-family: papyrus, fantasy;
     border-radius: 20px;
     font-size: 72px;
@@ -73,7 +75,7 @@ h1 {
 h2 {
     padding: 0;
     margin: 0;
-    color: #8e44ad;
+    color: var(--secondary-color);
     letter-spacing: 2px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
@@ -88,18 +90,46 @@ a {
     padding: 10px 15px;
     margin: 10px;
     text-align: center;
-    background-color: #f39c12;
+    background-color: var(--primary-color);
     border-radius: 15px;
     text-decoration: none;
-    color: #2c3e50;
+    color: var(--background-color);
     font-family: 'Barlow condensed', sans-serif;
 }
 
 a:hover,
 a:focus {
-    background-color: #f1c40f;
-    color: #ffffff;
-    outline: 2px solid #2c3e50;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    outline: 2px solid var(--background-color);
+}
+
+/* Buttons */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 3px solid var(--primary-color);
+}
+
+footer p {
+    margin: 0;
 }
 
 /* Contacts */
@@ -120,11 +150,11 @@ a:focus {
 #projects ul.project-list li a {
     font-size: 20px;
     text-decoration: none;
-    color: #2c3e50
+    color: var(--background-color);
 }
 
 #projects ul.project-list li a:hover {
-    color: #f39c12;
+    color: var(--secondary-color);
 }
 
 /* Flex Containers */
@@ -135,8 +165,8 @@ a:focus {
     align-items: center;
     padding: 0;
     margin: 0;
-    background-color: #34495e;
-    color: #ecf0f1;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     font-size: 18px;
     font-weight: 100;
     text-align: center;
@@ -166,8 +196,8 @@ a:focus {
     max-width: 1000px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #34495e;
-    color: #ecf0f1;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-size: 18px;
@@ -180,12 +210,12 @@ a:focus {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    border: 1px solid #e74c3c;
+    border: 1px solid var(--primary-color);
 }
 
 /* Table Header */
 .experience-table th {
-    background-color: #e74c3c;
+    background-color: var(--primary-color);
     color: white;
     padding: 12px;
     font-size: 20px;
@@ -196,23 +226,23 @@ a:focus {
 
 /* Table Body */
 .experience-table td {
-    background-color: #2c3e50;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
     padding: 12px;
     font-size: 18px;
     text-align: left;
-    border-bottom: 1px solid #34495e;
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 /* Table Row Hover Effect */
 .experience-table tr:hover {
-    background-color: #e67e22;
+    background-color: var(--secondary-color);
     transition: background-color 0.3s ease;
 }
 
 /* Alternate Row Styling */
 .experience-table tr:nth-child(even) {
-    background-color: #34495e;
+    background-color: var(--secondary-color);
 }
 
 /* =======================
@@ -246,7 +276,7 @@ a:focus {
     }
 
     .experience-table tr:nth-child(even) {
-        background-color: #34495e;
+        background-color: var(--secondary-color);
     }
 
     .experience-table-wrapper {
@@ -258,8 +288,7 @@ a:focus {
 @media (max-width: 600px) {
     .experience-container {
         padding: 15px;
-        background-color: #f39c12;
-
+        background-color: var(--porimary-color);
         color: #ffffff;
     }
 
@@ -324,11 +353,11 @@ a:focus {
 
 /* Variables */
 :root {
-    --primary-color: #f39c12;
-    --secondary-color: #2980b9;
+    --primary-color: #0073e6;
+    --secondary-color: #00c7fc;
     --accent-color: #8e44ad;
-    --background-color: #2c3e50;
-    --text-color: #ecf0f1;
+    --background-color: #fff;
+    --text-color: #333;
 }
 
 body {
